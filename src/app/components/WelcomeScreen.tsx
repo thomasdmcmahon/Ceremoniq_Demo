@@ -4,7 +4,7 @@ interface WelcomeScreenProps {
 
 export function WelcomeScreen({ onEnter }: WelcomeScreenProps) {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden" style={{ backgroundColor: "var(--ivory)" }}>
+    <div className="relative h-svh w-full overflow-hidden" style={{ backgroundColor: "var(--ivory)" }}>
       {/* Hero image full bleed */}
       <div className="absolute inset-0">
         <img
@@ -23,7 +23,7 @@ export function WelcomeScreen({ onEnter }: WelcomeScreenProps) {
       </div>
 
       {/* Top wordmark */}
-      <div className="relative z-10 flex justify-center pt-12 px-8">
+      <div className="relative z-10 flex justify-center px-8" style={{ paddingTop: "clamp(22px, 5vh, 44px)" }}>
         <span
           className="tracking-[0.28em] uppercase text-white/70"
           style={{ fontFamily: "var(--font-sans)", fontSize: "11px", letterSpacing: "0.28em" }}
@@ -33,7 +33,7 @@ export function WelcomeScreen({ onEnter }: WelcomeScreenProps) {
       </div>
 
       {/* Monogram / crest area */}
-      <div className="relative z-10 flex justify-center mt-12">
+      <div className="relative z-10 flex justify-center" style={{ marginTop: "clamp(18px, 6vh, 48px)" }}>
         <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="26" cy="26" r="25" stroke="rgba(198,168,107,0.55)" strokeWidth="0.8" />
           <circle cx="26" cy="26" r="20" stroke="rgba(198,168,107,0.35)" strokeWidth="0.5" />
@@ -47,39 +47,39 @@ export function WelcomeScreen({ onEnter }: WelcomeScreenProps) {
       </div>
 
       {/* Main content at bottom */}
-      <div className="relative z-10 flex flex-col items-center justify-end min-h-screen pb-16 px-8 text-center">
-        <div className="mb-2">
+      <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-center px-8 text-center" style={{ paddingBottom: "clamp(24px, 6vh, 48px)" }}>
+        <div>
           <p
-            className="text-white/60 tracking-widest uppercase mb-6"
-            style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.3em" }}
+            className="text-white/60 tracking-widest uppercase"
+            style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.3em", marginBottom: "clamp(12px, 2.2vh, 22px)" }}
           >
             The Wedding of
           </p>
           <h1
-            className="text-white mb-3 leading-none"
-            style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(52px, 11vw, 82px)", fontWeight: 300, letterSpacing: "-0.01em" }}
+            className="text-white leading-none"
+            style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(44px, 9vw, 74px)", fontWeight: 300, letterSpacing: "-0.01em", marginBottom: "clamp(8px, 1.6vh, 14px)" }}
           >
             Romeo &amp; Juliet
           </h1>
           <div
-            className="mx-auto mb-2"
-            style={{ width: "40px", height: "1px", backgroundColor: "var(--gold)", opacity: 0.7 }}
+            className="mx-auto"
+            style={{ width: "40px", height: "1px", backgroundColor: "var(--gold)", opacity: 0.7, marginBottom: "clamp(8px, 1.4vh, 12px)" }}
           />
           <p
-            className="text-white/75 mb-1"
+            className="text-white/75"
             style={{ fontFamily: "var(--font-serif)", fontSize: "18px", fontWeight: 400, fontStyle: "italic" }}
           >
             June 21–22, 2027
           </p>
           <p
-            className="text-white/55 mb-8"
-            style={{ fontFamily: "var(--font-sans)", fontSize: "12px", letterSpacing: "0.15em", textTransform: "uppercase" }}
+            className="text-white/55"
+            style={{ fontFamily: "var(--font-sans)", fontSize: "12px", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "clamp(14px, 2.6vh, 26px)" }}
           >
             Castello di Petrata · Umbria, Italy
           </p>
           <p
-            className="text-white/60 mb-12 mx-auto"
-            style={{ fontFamily: "var(--font-serif)", fontSize: "17px", fontStyle: "italic", maxWidth: "280px", lineHeight: 1.7 }}
+            className="text-white/60 mx-auto"
+            style={{ fontFamily: "var(--font-serif)", fontSize: "17px", fontStyle: "italic", maxWidth: "280px", lineHeight: 1.55, marginBottom: "clamp(18px, 4vh, 34px)" }}
           >
             We are delighted to celebrate with you.
           </p>
@@ -97,7 +97,7 @@ export function WelcomeScreen({ onEnter }: WelcomeScreenProps) {
             fontSize: "11px",
             letterSpacing: "0.22em",
             textTransform: "uppercase",
-            padding: "16px 48px",
+            padding: "clamp(12px, 2vh, 15px) 44px",
             cursor: "pointer",
             transition: "all 0.4s ease",
           }}
@@ -114,7 +114,7 @@ export function WelcomeScreen({ onEnter }: WelcomeScreenProps) {
         </button>
 
         {/* Floral line art decoration */}
-        <div className="mt-10 flex items-center gap-3 opacity-40">
+        <div className="flex items-center gap-3 opacity-40" style={{ marginTop: "clamp(18px, 3.2vh, 30px)" }}>
           <div style={{ width: "24px", height: "0.5px", backgroundColor: "rgba(255,255,255,0.5)" }} />
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
             <path d="M6 1 C6 1 7.5 3 6 6 C4.5 3 6 1 6 1Z" fill="rgba(198,168,107,0.7)" />

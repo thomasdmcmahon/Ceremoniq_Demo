@@ -111,9 +111,9 @@ const infoItems = [
 
 export function HomeScreen({ onNavigate, onOrganizerAccess, onPitchDeck }: HomeScreenProps) {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "var(--ivory)", fontFamily: "var(--font-sans)" }}>
+    <div className="h-svh overflow-hidden flex flex-col" style={{ backgroundColor: "var(--ivory)", fontFamily: "var(--font-sans)" }}>
       {/* Hero strip */}
-      <div className="relative w-full overflow-hidden" style={{ height: "52vw", maxHeight: "380px", minHeight: "220px" }}>
+      <div className="relative w-full shrink-0 overflow-hidden" style={{ height: "clamp(150px, 27vh, 220px)" }}>
         <img
           src="https://images.unsplash.com/photo-1727425383452-2be55354f06e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWRkaW5nJTIwdmVudWUlMjBjYXN0bGUlMjJ2aW5leWFyZCUyMEl0YWx5fGVufDF8fHx8MTc4MDk3MzU5MHww&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Castello di Petrata"
@@ -124,7 +124,7 @@ export function HomeScreen({ onNavigate, onOrganizerAccess, onPitchDeck }: HomeS
           className="absolute inset-0"
           style={{ background: "linear-gradient(to bottom, rgba(45,45,45,0.1) 0%, rgba(248,244,238,0) 60%, rgba(248,244,238,1) 100%)" }}
         />
-        <div className="absolute top-5 left-0 right-0 flex justify-center">
+        <div className="absolute left-0 right-0 flex justify-center" style={{ top: "clamp(12px, 2.2vh, 20px)" }}>
           <span style={{ fontFamily: "var(--font-sans)", fontSize: "9px", color: "rgba(255,255,255,0.75)", letterSpacing: "0.25em", textTransform: "uppercase" }}>
             Ceremoniq
           </span>
@@ -132,21 +132,21 @@ export function HomeScreen({ onNavigate, onOrganizerAccess, onPitchDeck }: HomeS
       </div>
 
       {/* Title section */}
-      <div className="px-7 pt-0 pb-2 text-center" style={{ marginTop: "-24px", position: "relative", zIndex: 1 }}>
+      <div className="px-7 pt-0 text-center shrink-0" style={{ marginTop: "-18px", paddingBottom: "clamp(4px, 1vh, 8px)", position: "relative", zIndex: 1 }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", color: "var(--gold)", letterSpacing: "0.3em", textTransform: "uppercase" }}>
           21–22 June 2027
         </p>
         <h1
-          style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(34px, 8vw, 52px)", fontWeight: 300, color: "var(--charcoal)", letterSpacing: "-0.01em", lineHeight: 1.1 }}
+          style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(30px, 6.5vw, 44px)", fontWeight: 300, color: "var(--charcoal)", letterSpacing: "-0.01em", lineHeight: 1.05 }}
         >
           Romeo &amp; Juliet
         </h1>
-        <p className="mt-2" style={{ fontFamily: "var(--font-serif)", fontSize: "15px", fontStyle: "italic", color: "var(--dusty-rose)" }}>
+        <p style={{ fontFamily: "var(--font-serif)", fontSize: "14px", fontStyle: "italic", color: "var(--dusty-rose)", marginTop: "3px" }}>
           Castello di Petrata, Umbria
         </p>
 
         {/* Ornamental divider */}
-        <div className="flex items-center justify-center gap-3 mt-5 mb-2">
+        <div className="flex items-center justify-center gap-3" style={{ marginTop: "clamp(8px, 1.5vh, 14px)" }}>
           <div style={{ width: "32px", height: "0.5px", backgroundColor: "var(--gold)", opacity: 0.5 }} />
           <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
             <path d="M4 0.5 C4 0.5 5 2 4 4 C3 2 4 0.5 4 0.5Z" fill="var(--gold)" opacity="0.8" />
@@ -159,28 +159,28 @@ export function HomeScreen({ onNavigate, onOrganizerAccess, onPitchDeck }: HomeS
       </div>
 
       {/* Info strip */}
-      <div className="mx-6 mb-7 grid grid-cols-2 divide-x" style={{ borderRadius: "4px", border: "0.5px solid rgba(45,45,45,0.1)" }}>
+      <div className="mx-6 grid grid-cols-2 divide-x shrink-0" style={{ borderRadius: "4px", border: "0.5px solid rgba(45,45,45,0.1)", marginBottom: "clamp(10px, 1.8vh, 16px)" }}>
         {infoItems.map((item) => (
-          <div key={item.label} className="flex flex-col items-center py-4 px-3 text-center gap-1">
+          <div key={item.label} className="flex flex-col items-center px-3 text-center gap-0.5" style={{ paddingTop: "clamp(8px, 1.4vh, 12px)", paddingBottom: "clamp(8px, 1.4vh, 12px)" }}>
             <div style={{ color: "var(--gold)", opacity: 0.85 }}>{item.icon}</div>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "8.5px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>
               {item.label}
             </p>
-            <p style={{ fontFamily: "var(--font-serif)", fontSize: "14px", color: "var(--charcoal)", fontWeight: 500 }}>{item.value}</p>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--muted-foreground)" }}>{item.detail}</p>
+            <p style={{ fontFamily: "var(--font-serif)", fontSize: "13px", color: "var(--charcoal)", fontWeight: 500, lineHeight: 1.1 }}>{item.value}</p>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", color: "var(--muted-foreground)", lineHeight: 1.15 }}>{item.detail}</p>
           </div>
         ))}
       </div>
 
       {/* Navigation section heading */}
-      <div className="px-7 mb-5">
+      <div className="px-7 shrink-0" style={{ marginBottom: "clamp(8px, 1.5vh, 12px)" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>
           Your Concierge
         </p>
       </div>
 
       {/* Nav grid — 2×2 */}
-      <div className="px-5 grid grid-cols-2 gap-3 pb-6">
+      <div className="px-5 grid grid-cols-2 gap-2.5 shrink-0">
         {navItems.map((item) => (
           <button
             key={item.id}
@@ -191,6 +191,7 @@ export function HomeScreen({ onNavigate, onOrganizerAccess, onPitchDeck }: HomeS
               border: "none",
               borderRadius: "3px",
               padding: "0",
+              minHeight: "clamp(88px, 15vh, 118px)",
               cursor: "pointer",
               overflow: "hidden",
               transition: "background-color 0.25s ease",
@@ -203,25 +204,25 @@ export function HomeScreen({ onNavigate, onOrganizerAccess, onPitchDeck }: HomeS
             }}
           >
             {/* Top ornamental border */}
-            <div className="w-full px-4 pt-4 pb-2">
+            <div className="w-full px-4" style={{ paddingTop: "clamp(8px, 1.5vh, 12px)", paddingBottom: "clamp(4px, 0.8vh, 8px)" }}>
               <OrnamentalBorder color="rgba(198,168,107,0.5)" />
             </div>
 
             {/* Icon + label */}
-            <div className="flex flex-col items-center px-4 py-3 gap-2.5">
+            <div className="flex flex-col items-center px-4 gap-1.5" style={{ paddingTop: "clamp(4px, 0.8vh, 8px)", paddingBottom: "clamp(4px, 0.8vh, 8px)" }}>
               <div style={{ color: "var(--dusty-rose)" }}>{item.icon}</div>
               <div>
-                <p style={{ fontFamily: "var(--font-serif)", fontSize: "18px", fontWeight: 500, color: "var(--charcoal)", lineHeight: 1.1 }}>
+                <p style={{ fontFamily: "var(--font-serif)", fontSize: "16px", fontWeight: 500, color: "var(--charcoal)", lineHeight: 1.05 }}>
                   {item.label}
                 </p>
-                <p style={{ fontFamily: "var(--font-sans)", fontSize: "9.5px", color: "var(--muted-foreground)", marginTop: "3px", letterSpacing: "0.04em", lineHeight: 1.4 }}>
+                <p style={{ fontFamily: "var(--font-sans)", fontSize: "8.8px", color: "var(--muted-foreground)", marginTop: "2px", letterSpacing: "0.04em", lineHeight: 1.25 }}>
                   {item.subtitle}
                 </p>
               </div>
             </div>
 
             {/* Bottom ornamental border */}
-            <div className="w-full px-4 pb-4 pt-2">
+            <div className="w-full px-4" style={{ paddingTop: "clamp(4px, 0.8vh, 8px)", paddingBottom: "clamp(8px, 1.5vh, 12px)" }}>
               <OrnamentalBorder color="rgba(198,168,107,0.5)" />
             </div>
           </button>
@@ -229,7 +230,7 @@ export function HomeScreen({ onNavigate, onOrganizerAccess, onPitchDeck }: HomeS
       </div>
 
       {/* Subtle footer links */}
-      <div className="flex justify-center items-center gap-6 pb-10">
+      <div className="flex justify-center items-center gap-6 shrink-0" style={{ paddingTop: "clamp(8px, 1.5vh, 12px)", paddingBottom: "clamp(10px, 2vh, 18px)" }}>
         <button
           onClick={onOrganizerAccess}
           style={{ background: "none", border: "none", cursor: "pointer", fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(45,45,45,0.25)", padding: "6px 4px", transition: "color 0.2s ease" }}
