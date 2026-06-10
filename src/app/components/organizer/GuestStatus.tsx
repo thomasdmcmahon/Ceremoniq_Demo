@@ -30,10 +30,10 @@ export function GuestStatus() {
       >
         <div className="flex items-end justify-between mb-4">
           <div>
-            <p style={{ fontFamily: "var(--font-serif)", fontSize: "42px", fontWeight: 300, color: "var(--charcoal)", lineHeight: 1 }}>
+            <p style={{ fontFamily: "var(--font-serif)", fontSize: "44px", fontWeight: 300, color: "var(--charcoal)", lineHeight: 1 }}>
               {displayCheckedIn}
             </p>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted-foreground)", marginTop: "4px" }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted-foreground)", marginTop: "4px" }}>
               of {displayTotal} guests checked in
             </p>
           </div>
@@ -62,7 +62,7 @@ export function GuestStatus() {
               />
             </svg>
             <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <p style={{ fontFamily: "var(--font-serif)", fontSize: "15px", fontWeight: 500, color: "var(--charcoal)" }}>
+              <p style={{ fontFamily: "var(--font-serif)", fontSize: "16.5px", fontWeight: 500, color: "var(--charcoal)" }}>
                 {Math.round((displayCheckedIn / displayTotal) * 100)}%
               </p>
             </div>
@@ -74,7 +74,7 @@ export function GuestStatus() {
           {segments.map(s => (
             <div key={s.label} className="flex items-center gap-1.5 px-3 py-1.5" style={{ backgroundColor: "var(--ivory)", borderRadius: "2px", border: "0.5px solid rgba(45,45,45,0.08)" }}>
               <div style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: s.color, flexShrink: 0 }} />
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--charcoal)" }}>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--charcoal)" }}>
                 <span style={{ fontWeight: 500 }}>{s.count}</span>{" "}
                 <span style={{ color: "var(--muted-foreground)" }}>{s.label}</span>
               </p>
@@ -92,28 +92,28 @@ export function GuestStatus() {
         ].filter(Boolean).map((insight, i) => (
           <div key={i} className="flex items-center gap-3 px-4 py-3" style={{ backgroundColor: "var(--ivory)", borderRadius: "3px", border: "0.5px solid rgba(45,45,45,0.08)" }}>
             <div style={{ width: "3px", height: "3px", borderRadius: "50%", backgroundColor: insight!.color, flexShrink: 0 }} />
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--charcoal)" }}>{insight!.text}</p>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "13.5px", color: "var(--charcoal)" }}>{insight!.text}</p>
           </div>
         ))}
       </div>
 
       {/* Requires attention */}
       <div className="mb-2">
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "10px" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "10px" }}>
           Requires Attention
         </p>
         <div className="flex flex-col gap-2">
           {notArrived.map(g => (
             <div key={g.id} className="flex items-center justify-between px-4 py-3" style={{ backgroundColor: "var(--champagne)", borderRadius: "3px", border: "0.5px solid rgba(45,45,45,0.07)" }}>
               <div>
-                <p style={{ fontFamily: "var(--font-serif)", fontSize: "16px", color: "var(--charcoal)" }}>{g.name}</p>
-                <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", color: "var(--muted-foreground)", marginTop: "1px" }}>
+                <p style={{ fontFamily: "var(--font-serif)", fontSize: "17.5px", color: "var(--charcoal)" }}>{g.name}</p>
+                <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--muted-foreground)", marginTop: "1px" }}>
                   Table {g.table} · {g.hotel}
                 </p>
               </div>
               <div className="flex items-center gap-1.5">
                 <div style={{ width: "5px", height: "5px", borderRadius: "50%", backgroundColor: arrivalColor[g.arrived], flexShrink: 0 }} />
-                <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", color: arrivalColor[g.arrived], letterSpacing: "0.08em" }}>
+                <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: arrivalColor[g.arrived], letterSpacing: "0.08em" }}>
                   {arrivalLabel[g.arrived]}
                 </p>
               </div>

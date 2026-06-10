@@ -61,16 +61,16 @@ export function DiningScreen({ onBack }: DiningScreenProps) {
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M10 3L5 8L10 13" stroke="var(--charcoal)" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          <span style={{ fontFamily: "var(--font-sans)", fontSize: "11px", letterSpacing: "0.12em", color: "var(--muted-foreground)" }}>Back</span>
+          <span style={{ fontFamily: "var(--font-sans)", fontSize: "12px", letterSpacing: "0.12em", color: "var(--muted-foreground)" }}>Back</span>
         </button>
-        <span style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>
+        <span style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>
           Ceremoniq
         </span>
         <div style={{ width: "48px" }} />
       </div>
 
       <div className="px-7 pt-8 pb-6">
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--gold)" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--gold)" }}>
           Your Preferences
         </p>
         <h1
@@ -81,7 +81,7 @@ export function DiningScreen({ onBack }: DiningScreenProps) {
         </h1>
         <p
           className="mt-2"
-          style={{ fontFamily: "var(--font-serif)", fontSize: "15px", fontStyle: "italic", color: "var(--dusty-rose)" }}
+          style={{ fontFamily: "var(--font-serif)", fontSize: "16.5px", fontStyle: "italic", color: "var(--dusty-rose)" }}
         >
           Help us make your evening perfect
         </p>
@@ -89,7 +89,7 @@ export function DiningScreen({ onBack }: DiningScreenProps) {
 
       {/* Dietary section */}
       <div className="px-7 mb-8">
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "14px" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "14px" }}>
           Dietary Requirements
         </p>
         <div className="flex flex-wrap gap-2.5">
@@ -101,7 +101,7 @@ export function DiningScreen({ onBack }: DiningScreenProps) {
                 onClick={() => setSelected(opt.id)}
                 style={{
                   fontFamily: "var(--font-sans)",
-                  fontSize: "12px",
+                  fontSize: "13.5px",
                   padding: "9px 18px",
                   borderRadius: "2px",
                   border: isSelected ? "1px solid var(--gold)" : "0.5px solid rgba(45,45,45,0.15)",
@@ -120,7 +120,7 @@ export function DiningScreen({ onBack }: DiningScreenProps) {
         {selected !== "standard" && (
           <p
             className="mt-3"
-            style={{ fontFamily: "var(--font-serif)", fontSize: "14px", fontStyle: "italic", color: "var(--dusty-rose)" }}
+            style={{ fontFamily: "var(--font-serif)", fontSize: "15.5px", fontStyle: "italic", color: "var(--dusty-rose)" }}
           >
             {dietaryOptions.find((o) => o.id === selected)?.description} — the kitchen will be notified.
           </p>
@@ -133,7 +133,7 @@ export function DiningScreen({ onBack }: DiningScreenProps) {
       {/* Course choices */}
       {courseChoices.map((section) => (
         <div key={section.course} className="px-7 mb-8">
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "14px" }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "14px" }}>
             {section.course} Selection
           </p>
           <div className="flex flex-col gap-3">
@@ -175,10 +175,10 @@ export function DiningScreen({ onBack }: DiningScreenProps) {
                     )}
                   </div>
                   <div>
-                    <p style={{ fontFamily: "var(--font-serif)", fontSize: "17px", fontWeight: 500, color: "var(--charcoal)", lineHeight: 1.2 }}>
+                    <p style={{ fontFamily: "var(--font-serif)", fontSize: "18.5px", fontWeight: 500, color: "var(--charcoal)", lineHeight: 1.2 }}>
                       {opt.label}
                     </p>
-                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--muted-foreground)", marginTop: "3px", lineHeight: 1.5 }}>
+                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--muted-foreground)", marginTop: "3px", lineHeight: 1.5 }}>
                       {opt.sub}
                     </p>
                   </div>
@@ -191,7 +191,7 @@ export function DiningScreen({ onBack }: DiningScreenProps) {
 
       {/* Notes */}
       <div className="px-7 mb-8">
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "12px" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "12px" }}>
           Additional Notes
         </p>
         <textarea
@@ -206,7 +206,7 @@ export function DiningScreen({ onBack }: DiningScreenProps) {
             borderRadius: "3px",
             padding: "14px 16px",
             fontFamily: "var(--font-sans)",
-            fontSize: "13px",
+            fontSize: "14.5px",
             color: "var(--charcoal)",
             resize: "none",
             outline: "none",
@@ -227,7 +227,7 @@ export function DiningScreen({ onBack }: DiningScreenProps) {
             borderRadius: "3px",
             padding: "16px",
             fontFamily: "var(--font-sans)",
-            fontSize: "11px",
+            fontSize: "12px",
             letterSpacing: "0.22em",
             textTransform: "uppercase",
             cursor: "pointer",

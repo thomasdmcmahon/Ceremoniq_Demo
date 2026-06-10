@@ -26,7 +26,7 @@ export function WelcomeScreen({ onEnter }: WelcomeScreenProps) {
       <div className="relative z-10 flex justify-center px-8" style={{ paddingTop: "clamp(22px, 5vh, 44px)" }}>
         <span
           className="tracking-[0.28em] uppercase text-white/70"
-          style={{ fontFamily: "var(--font-sans)", fontSize: "11px", letterSpacing: "0.28em" }}
+          style={{ fontFamily: "var(--font-sans)", fontSize: "12px", letterSpacing: "0.28em" }}
         >
           Ceremoniq
         </span>
@@ -38,11 +38,11 @@ export function WelcomeScreen({ onEnter }: WelcomeScreenProps) {
           <circle cx="26" cy="26" r="25" stroke="rgba(198,168,107,0.55)" strokeWidth="0.8" />
           <circle cx="26" cy="26" r="20" stroke="rgba(198,168,107,0.35)" strokeWidth="0.5" />
           {/* R */}
-          <text x="10" y="33" fontFamily="Cormorant Garamond, serif" fontSize="20" fontWeight="300" fill="rgba(198,168,107,0.9)" fontStyle="italic">R</text>
+          <text x="10" y="33" fontFamily="Cormorant Garamond, serif" fontSize="21.5" fontWeight="300" fill="rgba(198,168,107,0.9)" fontStyle="italic">R</text>
           {/* & */}
-          <text x="22.5" y="32" fontFamily="Cormorant Garamond, serif" fontSize="13" fontWeight="300" fill="rgba(255,255,255,0.5)"> &</text>
+          <text x="22.5" y="32" fontFamily="Cormorant Garamond, serif" fontSize="14.5" fontWeight="300" fill="rgba(255,255,255,0.5)"> &</text>
           {/* J */}
-          <text x="33" y="33" fontFamily="Cormorant Garamond, serif" fontSize="20" fontWeight="300" fill="rgba(198,168,107,0.9)" fontStyle="italic">J</text>
+          <text x="33" y="33" fontFamily="Cormorant Garamond, serif" fontSize="21.5" fontWeight="300" fill="rgba(198,168,107,0.9)" fontStyle="italic">J</text>
         </svg>
       </div>
 
@@ -51,7 +51,7 @@ export function WelcomeScreen({ onEnter }: WelcomeScreenProps) {
         <div>
           <p
             className="text-white/60 tracking-widest uppercase"
-            style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.3em", marginBottom: "clamp(12px, 2.2vh, 22px)" }}
+            style={{ fontFamily: "var(--font-sans)", fontSize: "11px", letterSpacing: "0.3em", marginBottom: "clamp(12px, 2.2vh, 22px)" }}
           >
             The Wedding of
           </p>
@@ -67,19 +67,19 @@ export function WelcomeScreen({ onEnter }: WelcomeScreenProps) {
           />
           <p
             className="text-white/75"
-            style={{ fontFamily: "var(--font-serif)", fontSize: "18px", fontWeight: 400, fontStyle: "italic" }}
+            style={{ fontFamily: "var(--font-serif)", fontSize: "19.5px", fontWeight: 400, fontStyle: "italic" }}
           >
             June 21–22, 2027
           </p>
           <p
             className="text-white/55"
-            style={{ fontFamily: "var(--font-sans)", fontSize: "12px", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "clamp(14px, 2.6vh, 26px)" }}
+            style={{ fontFamily: "var(--font-sans)", fontSize: "13.5px", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "clamp(14px, 2.6vh, 26px)" }}
           >
             Castello di Petrata · Umbria, Italy
           </p>
           <p
             className="text-white/60 mx-auto"
-            style={{ fontFamily: "var(--font-serif)", fontSize: "17px", fontStyle: "italic", maxWidth: "280px", lineHeight: 1.55, marginBottom: "clamp(18px, 4vh, 34px)" }}
+            style={{ fontFamily: "var(--font-serif)", fontSize: "18.5px", fontStyle: "italic", maxWidth: "280px", lineHeight: 1.55, marginBottom: "clamp(18px, 4vh, 34px)" }}
           >
             We are delighted to celebrate with you.
           </p>
@@ -94,7 +94,7 @@ export function WelcomeScreen({ onEnter }: WelcomeScreenProps) {
             border: "1px solid rgba(198,168,107,0.6)",
             color: "rgba(255,255,255,0.9)",
             fontFamily: "var(--font-sans)",
-            fontSize: "11px",
+            fontSize: "12px",
             letterSpacing: "0.22em",
             textTransform: "uppercase",
             padding: "clamp(12px, 2vh, 15px) 44px",

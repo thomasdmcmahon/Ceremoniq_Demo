@@ -78,9 +78,9 @@ export function TimelineScreen({ onBack }: TimelineScreenProps) {
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M10 3L5 8L10 13" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          <span style={{ fontFamily: "var(--font-sans)", fontSize: "11px", letterSpacing: "0.12em", color: "var(--muted-foreground)" }}>Back</span>
+          <span style={{ fontFamily: "var(--font-sans)", fontSize: "12px", letterSpacing: "0.12em", color: "var(--muted-foreground)" }}>Back</span>
         </button>
-        <span style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>
+        <span style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>
           Ceremoniq
         </span>
         <div style={{ width: "48px" }} />
@@ -88,7 +88,7 @@ export function TimelineScreen({ onBack }: TimelineScreenProps) {
 
       {/* Page title */}
       <div className="px-7 pt-8 pb-6">
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--gold)" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--gold)" }}>
           Schedule of Events
         </p>
         <h1
@@ -99,7 +99,7 @@ export function TimelineScreen({ onBack }: TimelineScreenProps) {
         </h1>
         <p
           className="mt-2"
-          style={{ fontFamily: "var(--font-serif)", fontSize: "15px", fontStyle: "italic", color: "var(--dusty-rose)" }}
+          style={{ fontFamily: "var(--font-serif)", fontSize: "16.5px", fontStyle: "italic", color: "var(--dusty-rose)" }}
         >
           Castello di Petrata, June 21–22
         </p>
@@ -111,8 +111,8 @@ export function TimelineScreen({ onBack }: TimelineScreenProps) {
           {/* Day header */}
           <div className="flex items-center gap-4 mb-6">
             <div>
-              <p style={{ fontFamily: "var(--font-serif)", fontSize: "20px", fontWeight: 500, color: "var(--charcoal)" }}>{day.day}</p>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--muted-foreground)", marginTop: "1px" }}>{day.date}</p>
+              <p style={{ fontFamily: "var(--font-serif)", fontSize: "21.5px", fontWeight: 500, color: "var(--charcoal)" }}>{day.day}</p>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--muted-foreground)", marginTop: "1px" }}>{day.date}</p>
             </div>
             <div style={{ flex: 1, height: "0.5px", backgroundColor: "rgba(45,45,45,0.1)" }} />
           </div>
@@ -167,26 +167,26 @@ export function TimelineScreen({ onBack }: TimelineScreenProps) {
                     }}
                   >
                     <div className="flex items-start justify-between gap-2 mb-1">
-                      <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gold)" }}>
+                      <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gold)" }}>
                         {item.time}
                       </p>
-                      <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", color: "var(--muted-foreground)" }}>{item.duration}</p>
+                      <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--muted-foreground)" }}>{item.duration}</p>
                     </div>
                     <h3
-                      style={{ fontFamily: "var(--font-serif)", fontSize: "22px", fontWeight: 500, color: "var(--charcoal)", lineHeight: 1.2, marginBottom: "3px" }}
+                      style={{ fontFamily: "var(--font-serif)", fontSize: "24px", fontWeight: 500, color: "var(--charcoal)", lineHeight: 1.2, marginBottom: "3px" }}
                     >
                       {item.event}
                     </h3>
-                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--dusty-rose)", marginBottom: "10px" }}>
+                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--dusty-rose)", marginBottom: "10px" }}>
                       {item.location}
                     </p>
-                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "13px", color: "var(--muted-foreground)", lineHeight: 1.65 }}>
+                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "14.5px", color: "var(--muted-foreground)", lineHeight: 1.65 }}>
                       {item.description}
                     </p>
                     {item.dress && (
                       <div className="mt-3 inline-flex items-center gap-1.5">
                         <div style={{ width: "3px", height: "3px", borderRadius: "50%", backgroundColor: "var(--sage)" }} />
-                        <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", color: "var(--sage)", letterSpacing: "0.1em" }}>
+                        <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--sage)", letterSpacing: "0.1em" }}>
                           {item.dress}
                         </p>
                       </div>

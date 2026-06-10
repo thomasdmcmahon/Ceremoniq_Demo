@@ -3,7 +3,6 @@ type Screen = "home" | "timeline" | "dining" | "seating" | "transportation";
 interface HomeScreenProps {
   onNavigate: (screen: Screen) => void;
   onOrganizerAccess: () => void;
-  onPitchDeck: () => void;
 }
 
 const navItems = [
@@ -109,7 +108,7 @@ const infoItems = [
   },
 ];
 
-export function HomeScreen({ onNavigate, onOrganizerAccess, onPitchDeck }: HomeScreenProps) {
+export function HomeScreen({ onNavigate, onOrganizerAccess }: HomeScreenProps) {
   return (
     <div className="h-svh overflow-hidden flex flex-col" style={{ backgroundColor: "var(--ivory)", fontFamily: "var(--font-sans)" }}>
       {/* Hero strip */}
@@ -125,7 +124,7 @@ export function HomeScreen({ onNavigate, onOrganizerAccess, onPitchDeck }: HomeS
           style={{ background: "linear-gradient(to bottom, rgba(45,45,45,0.1) 0%, rgba(248,244,238,0) 60%, rgba(248,244,238,1) 100%)" }}
         />
         <div className="absolute left-0 right-0 flex justify-center" style={{ top: "clamp(12px, 2.2vh, 20px)" }}>
-          <span style={{ fontFamily: "var(--font-sans)", fontSize: "9px", color: "rgba(255,255,255,0.75)", letterSpacing: "0.25em", textTransform: "uppercase" }}>
+          <span style={{ fontFamily: "var(--font-sans)", fontSize: "10px", color: "rgba(255,255,255,0.75)", letterSpacing: "0.25em", textTransform: "uppercase" }}>
             Ceremoniq
           </span>
         </div>
@@ -133,7 +132,7 @@ export function HomeScreen({ onNavigate, onOrganizerAccess, onPitchDeck }: HomeS
 
       {/* Title section */}
       <div className="px-7 pt-0 text-center shrink-0" style={{ marginTop: "-18px", paddingBottom: "clamp(4px, 1vh, 8px)", position: "relative", zIndex: 1 }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", color: "var(--gold)", letterSpacing: "0.3em", textTransform: "uppercase" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", color: "var(--gold)", letterSpacing: "0.3em", textTransform: "uppercase" }}>
           21–22 June 2027
         </p>
         <h1
@@ -141,7 +140,7 @@ export function HomeScreen({ onNavigate, onOrganizerAccess, onPitchDeck }: HomeS
         >
           Romeo &amp; Juliet
         </h1>
-        <p style={{ fontFamily: "var(--font-serif)", fontSize: "14px", fontStyle: "italic", color: "var(--dusty-rose)", marginTop: "3px" }}>
+        <p style={{ fontFamily: "var(--font-serif)", fontSize: "15.5px", fontStyle: "italic", color: "var(--dusty-rose)", marginTop: "3px" }}>
           Castello di Petrata, Umbria
         </p>
 
@@ -163,18 +162,18 @@ export function HomeScreen({ onNavigate, onOrganizerAccess, onPitchDeck }: HomeS
         {infoItems.map((item) => (
           <div key={item.label} className="flex flex-col items-center px-3 text-center gap-0.5" style={{ paddingTop: "clamp(8px, 1.4vh, 12px)", paddingBottom: "clamp(8px, 1.4vh, 12px)" }}>
             <div style={{ color: "var(--gold)", opacity: 0.85 }}>{item.icon}</div>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "8.5px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "9.5px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>
               {item.label}
             </p>
-            <p style={{ fontFamily: "var(--font-serif)", fontSize: "13px", color: "var(--charcoal)", fontWeight: 500, lineHeight: 1.1 }}>{item.value}</p>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", color: "var(--muted-foreground)", lineHeight: 1.15 }}>{item.detail}</p>
+            <p style={{ fontFamily: "var(--font-serif)", fontSize: "14.5px", color: "var(--charcoal)", fontWeight: 500, lineHeight: 1.1 }}>{item.value}</p>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--muted-foreground)", lineHeight: 1.15 }}>{item.detail}</p>
           </div>
         ))}
       </div>
 
       {/* Navigation section heading */}
       <div className="px-7 shrink-0" style={{ marginBottom: "clamp(8px, 1.5vh, 12px)" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>
           Your Concierge
         </p>
       </div>
@@ -212,10 +211,10 @@ export function HomeScreen({ onNavigate, onOrganizerAccess, onPitchDeck }: HomeS
             <div className="flex flex-col items-center px-4 gap-1.5" style={{ paddingTop: "clamp(4px, 0.8vh, 8px)", paddingBottom: "clamp(4px, 0.8vh, 8px)" }}>
               <div style={{ color: "var(--dusty-rose)" }}>{item.icon}</div>
               <div>
-                <p style={{ fontFamily: "var(--font-serif)", fontSize: "16px", fontWeight: 500, color: "var(--charcoal)", lineHeight: 1.05 }}>
+                <p style={{ fontFamily: "var(--font-serif)", fontSize: "17.5px", fontWeight: 500, color: "var(--charcoal)", lineHeight: 1.05 }}>
                   {item.label}
                 </p>
-                <p style={{ fontFamily: "var(--font-sans)", fontSize: "8.8px", color: "var(--muted-foreground)", marginTop: "2px", letterSpacing: "0.04em", lineHeight: 1.25 }}>
+                <p style={{ fontFamily: "var(--font-sans)", fontSize: "9.8px", color: "var(--muted-foreground)", marginTop: "2px", letterSpacing: "0.04em", lineHeight: 1.25 }}>
                   {item.subtitle}
                 </p>
               </div>
@@ -230,23 +229,14 @@ export function HomeScreen({ onNavigate, onOrganizerAccess, onPitchDeck }: HomeS
       </div>
 
       {/* Subtle footer links */}
-      <div className="flex justify-center items-center gap-6 shrink-0" style={{ paddingTop: "clamp(8px, 1.5vh, 12px)", paddingBottom: "clamp(10px, 2vh, 18px)" }}>
+      <div className="flex justify-center items-center shrink-0" style={{ paddingTop: "clamp(8px, 1.5vh, 12px)", paddingBottom: "clamp(10px, 2vh, 18px)" }}>
         <button
           onClick={onOrganizerAccess}
-          style={{ background: "none", border: "none", cursor: "pointer", fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(45,45,45,0.25)", padding: "6px 4px", transition: "color 0.2s ease" }}
+          style={{ background: "none", border: "none", cursor: "pointer", fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(45,45,45,0.25)", padding: "6px 4px", transition: "color 0.2s ease" }}
           onMouseEnter={e => (e.currentTarget.style.color = "var(--muted-foreground)")}
           onMouseLeave={e => (e.currentTarget.style.color = "rgba(45,45,45,0.25)")}
         >
           Planner Access
-        </button>
-        <div style={{ width: "2px", height: "2px", borderRadius: "50%", backgroundColor: "rgba(45,45,45,0.15)" }} />
-        <button
-          onClick={onPitchDeck}
-          style={{ background: "none", border: "none", cursor: "pointer", fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(45,45,45,0.25)", padding: "6px 4px", transition: "color 0.2s ease" }}
-          onMouseEnter={e => (e.currentTarget.style.color = "var(--muted-foreground)")}
-          onMouseLeave={e => (e.currentTarget.style.color = "rgba(45,45,45,0.25)")}
-        >
-          Pitch Deck
         </button>
       </div>
     </div>

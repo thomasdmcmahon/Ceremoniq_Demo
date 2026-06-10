@@ -9,29 +9,29 @@ const tables = [
     id: 1,
     name: "Table 1 — Cortona",
     guests: ["Maya Johnson", "Aiden Park", "Sofia Reyes", "James Okafor", "Priya Sharma", "Marcus Thompson", "Yuna Kim", "Daniel Adeyemi"],
-    x: 28,
-    y: 22,
+    x: 36,
+    y: 36,
   },
   {
     id: 2,
     name: "Table 2 — Siena",
     guests: ["Aaliyah Washington", "Carlos Mendoza", "Jin-soo Choi", "Fatima Al-Hassan", "Tyler Robinson", "Mei-Lin Chen", "Kwame Asante", "Isabelle Moreau"],
-    x: 70,
-    y: 22,
+    x: 64,
+    y: 36,
   },
   {
     id: 3,
     name: "Table 3 — Assisi",
     guests: ["Zara Ahmed", "Luca Fernandez", "Soo-Jin Park", "Dominique Williams", "Rahul Nair", "Amara Diallo", "Kenji Nakamura", "Camille Dubois"],
-    x: 28,
-    y: 62,
+    x: 36,
+    y: 66,
   },
   {
     id: 4,
     name: "Table 4 — Spoleto",
     guests: ["Isaiah Carter", "Hana Yamamoto", "Mateo Gonzalez", "Adaeze Okonkwo", "Sunhee Bae", "Jordan Brooks", "Nia Mensah", "Rafael Santos"],
-    x: 70,
-    y: 62,
+    x: 64,
+    y: 66,
   },
 ];
 
@@ -96,7 +96,7 @@ function TableCircle({
           y={cy + 5}
           textAnchor="middle"
           fontFamily="Cormorant Garamond, Georgia, serif"
-          fontSize="16"
+          fontSize="17.5"
           fontWeight="500"
           fill={isHighlighted ? "var(--gold)" : "rgba(45,45,45,0.6)"}
         >
@@ -106,7 +106,7 @@ function TableCircle({
       <p
         style={{
           fontFamily: "var(--font-sans)",
-          fontSize: "9px",
+          fontSize: "10px",
           textAlign: "center",
           letterSpacing: "0.1em",
           color: isHighlighted ? "var(--gold)" : "var(--muted-foreground)",
@@ -153,16 +153,16 @@ export function SeatingScreen({ onBack }: SeatingScreenProps) {
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M10 3L5 8L10 13" stroke="var(--charcoal)" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          <span style={{ fontFamily: "var(--font-sans)", fontSize: "11px", letterSpacing: "0.12em", color: "var(--muted-foreground)" }}>Back</span>
+          <span style={{ fontFamily: "var(--font-sans)", fontSize: "12px", letterSpacing: "0.12em", color: "var(--muted-foreground)" }}>Back</span>
         </button>
-        <span style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>
+        <span style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>
           Ceremoniq
         </span>
         <div style={{ width: "48px" }} />
       </div>
 
       <div className="px-7 pt-8 pb-6">
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--gold)" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--gold)" }}>
           Grand Salon
         </p>
         <h1
@@ -173,7 +173,7 @@ export function SeatingScreen({ onBack }: SeatingScreenProps) {
         </h1>
         <p
           className="mt-2 mb-6"
-          style={{ fontFamily: "var(--font-serif)", fontSize: "15px", fontStyle: "italic", color: "var(--dusty-rose)" }}
+          style={{ fontFamily: "var(--font-serif)", fontSize: "16.5px", fontStyle: "italic", color: "var(--dusty-rose)" }}
         >
           Find your place at the table
         </p>
@@ -205,7 +205,7 @@ export function SeatingScreen({ onBack }: SeatingScreenProps) {
                 border: "none",
                 outline: "none",
                 fontFamily: "var(--font-sans)",
-                fontSize: "13px",
+                fontSize: "14.5px",
                 color: "var(--charcoal)",
               }}
             />
@@ -219,7 +219,7 @@ export function SeatingScreen({ onBack }: SeatingScreenProps) {
               borderRadius: "3px",
               padding: "13px 18px",
               fontFamily: "var(--font-sans)",
-              fontSize: "11px",
+              fontSize: "12px",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               cursor: "pointer",
@@ -243,18 +243,18 @@ export function SeatingScreen({ onBack }: SeatingScreenProps) {
           >
             {foundTable ? (
               <div>
-                <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--sage)", marginBottom: "4px" }}>
+                <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--sage)", marginBottom: "4px" }}>
                   Your table
                 </p>
-                <p style={{ fontFamily: "var(--font-serif)", fontSize: "20px", fontWeight: 500, color: "var(--charcoal)" }}>
+                <p style={{ fontFamily: "var(--font-serif)", fontSize: "21.5px", fontWeight: 500, color: "var(--charcoal)" }}>
                   {foundTable.name}
                 </p>
-                <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--muted-foreground)", marginTop: "2px" }}>
+                <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--muted-foreground)", marginTop: "2px" }}>
                   Highlighted below on the floor plan
                 </p>
               </div>
             ) : (
-              <p style={{ fontFamily: "var(--font-serif)", fontSize: "16px", fontStyle: "italic", color: "var(--dusty-rose)" }}>
+              <p style={{ fontFamily: "var(--font-serif)", fontSize: "17.5px", fontStyle: "italic", color: "var(--dusty-rose)" }}>
                 No guest found — please check your name spelling or ask the concierge.
               </p>
             )}
@@ -270,13 +270,15 @@ export function SeatingScreen({ onBack }: SeatingScreenProps) {
             backgroundColor: "var(--champagne)",
             border: "0.5px solid rgba(45,45,45,0.1)",
             borderRadius: "4px",
-            paddingBottom: "95%",
+            height: "clamp(280px, 62vw, 340px)",
+            maxWidth: "560px",
+            margin: "0 auto",
             overflow: "hidden",
           }}
         >
           {/* Room label */}
           <div className="absolute top-4 left-0 right-0 flex justify-center z-10">
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "8.5px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--muted-foreground)", opacity: 0.6 }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "9.5px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--muted-foreground)", opacity: 0.6 }}>
               Grand Salon — Floor Plan
             </p>
           </div>
@@ -295,7 +297,7 @@ export function SeatingScreen({ onBack }: SeatingScreenProps) {
               borderRadius: "2px",
             }}
           >
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "7px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gold)" }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "8px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gold)" }}>
               Top Table
             </p>
           </div>
@@ -323,7 +325,7 @@ export function SeatingScreen({ onBack }: SeatingScreenProps) {
               borderRadius: "50%",
             }}
           >
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "7px", letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(45,45,45,0.25)" }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "8px", letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(45,45,45,0.25)" }}>
               Dance Floor
             </p>
           </div>
@@ -333,7 +335,7 @@ export function SeatingScreen({ onBack }: SeatingScreenProps) {
       {/* Guest list for found table */}
       {foundTable && (
         <div className="px-7 mb-12">
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "14px" }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "14px" }}>
             Your tablemates
           </p>
           <div className="flex flex-col gap-2.5">
@@ -360,11 +362,11 @@ export function SeatingScreen({ onBack }: SeatingScreenProps) {
                     flexShrink: 0,
                   }}
                 >
-                  <p style={{ fontFamily: "var(--font-serif)", fontSize: "12px", color: "var(--sage)", fontWeight: 500 }}>
+                  <p style={{ fontFamily: "var(--font-serif)", fontSize: "13.5px", color: "var(--sage)", fontWeight: 500 }}>
                     {guest.split(" ").map((n) => n[0]).join("").slice(0, 2)}
                   </p>
                 </div>
-                <p style={{ fontFamily: "var(--font-serif)", fontSize: "16px", color: "var(--charcoal)" }}>{guest}</p>
+                <p style={{ fontFamily: "var(--font-serif)", fontSize: "17.5px", color: "var(--charcoal)" }}>{guest}</p>
               </div>
             ))}
           </div>

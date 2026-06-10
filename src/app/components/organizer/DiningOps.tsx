@@ -9,7 +9,7 @@ const dietaryBadgeStyle = (d: Dietary): React.CSSProperties => ({
   borderRadius: "2px",
   padding: "2px 7px",
   fontFamily: "var(--font-sans)",
-  fontSize: "9.5px",
+  fontSize: "10.5px",
   letterSpacing: "0.1em",
   color: dietaryColors[d],
   whiteSpace: "nowrap" as const,
@@ -53,7 +53,7 @@ export function DiningOps() {
         {activeFilter && (
           <button
             onClick={() => setActiveFilter(null)}
-            style={{ background: "none", border: "0.5px solid rgba(45,45,45,0.15)", borderRadius: "2px", padding: "2px 10px", fontSize: "9.5px", color: "var(--muted-foreground)", cursor: "pointer", letterSpacing: "0.1em" }}
+            style={{ background: "none", border: "0.5px solid rgba(45,45,45,0.15)", borderRadius: "2px", padding: "2px 10px", fontSize: "10.5px", color: "var(--muted-foreground)", cursor: "pointer", letterSpacing: "0.1em" }}
           >
             Clear ✕
           </button>
@@ -72,10 +72,10 @@ export function DiningOps() {
                   <circle cx="7" cy="10.5" r="0.5" fill="var(--dusty-rose)" />
                 </svg>
                 <div>
-                  <p style={{ fontFamily: "var(--font-serif)", fontSize: "15px", color: "var(--charcoal)" }}>
+                  <p style={{ fontFamily: "var(--font-serif)", fontSize: "16.5px", color: "var(--charcoal)" }}>
                     {g.name} — <span style={{ color: "var(--dusty-rose)" }}>{g.dietary}</span>
                   </p>
-                  <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--muted-foreground)", marginTop: "1px" }}>
+                  <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--muted-foreground)", marginTop: "1px" }}>
                     {g.dietaryNote} · Table {g.table}, Seat {g.seat}
                   </p>
                 </div>
@@ -89,7 +89,7 @@ export function DiningOps() {
       {!activeFilter && (
         <div className="mb-4 px-4 py-3 flex items-center gap-2" style={{ backgroundColor: "var(--champagne)", borderRadius: "3px", border: "0.5px solid rgba(45,45,45,0.07)" }}>
           <div style={{ width: "3px", height: "3px", borderRadius: "50%", backgroundColor: "var(--sage)", flexShrink: 0 }} />
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--charcoal)" }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "13.5px", color: "var(--charcoal)" }}>
             7 guests with dietary restrictions are seated at Table 3 — Assisi
           </p>
         </div>
@@ -98,7 +98,7 @@ export function DiningOps() {
       {/* Column headers */}
       <div className="grid mb-2 px-1" style={{ gridTemplateColumns: "80px 1fr 1fr 1fr" }}>
         {["Seat", "Guest", "Meal", "Dietary"].map(h => (
-          <p key={h} style={{ fontFamily: "var(--font-sans)", fontSize: "8.5px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>
+          <p key={h} style={{ fontFamily: "var(--font-sans)", fontSize: "9.5px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>
             {h}
           </p>
         ))}
@@ -118,20 +118,20 @@ export function DiningOps() {
               gap: "8px",
             }}
           >
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "10.5px", color: "var(--muted-foreground)" }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "11.5px", color: "var(--muted-foreground)" }}>
               T{g.table} · S{g.seat}
             </p>
-            <p style={{ fontFamily: "var(--font-serif)", fontSize: "15px", color: "var(--charcoal)", lineHeight: 1.2 }}>
+            <p style={{ fontFamily: "var(--font-serif)", fontSize: "16.5px", color: "var(--charcoal)", lineHeight: 1.2 }}>
               {g.name}
             </p>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "10.5px", color: "var(--muted-foreground)", lineHeight: 1.3 }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "11.5px", color: "var(--muted-foreground)", lineHeight: 1.3 }}>
               {g.meal.split(" ").slice(0, 2).join(" ")}
             </p>
             <div>
               {g.dietary !== "Standard" ? (
                 <span style={dietaryBadgeStyle(g.dietary)}>{g.dietary}</span>
               ) : (
-                <span style={{ fontFamily: "var(--font-sans)", fontSize: "10px", color: "rgba(45,45,45,0.3)" }}>—</span>
+                <span style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "rgba(45,45,45,0.3)" }}>—</span>
               )}
             </div>
           </div>

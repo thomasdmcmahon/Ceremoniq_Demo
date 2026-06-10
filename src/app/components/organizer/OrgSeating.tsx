@@ -4,10 +4,10 @@ import { guests, dietaryColors, arrivalColor, arrivalLabel, type Guest } from ".
 const tables = [1, 2, 3, 4];
 const tableNames: Record<number, string> = { 1: "Cortona", 2: "Siena", 3: "Assisi", 4: "Spoleto" };
 const tablePositions: Record<number, { x: number; y: number }> = {
-  1: { x: 28, y: 26 },
-  2: { x: 72, y: 26 },
-  3: { x: 28, y: 70 },
-  4: { x: 72, y: 70 },
+  1: { x: 36, y: 36 },
+  2: { x: 64, y: 36 },
+  3: { x: 36, y: 66 },
+  4: { x: 64, y: 66 },
 };
 
 function TableSvg({
@@ -47,10 +47,10 @@ function TableSvg({
             <circle key={i} cx={gx} cy={gy} r={5} fill={dotColor} fillOpacity={0.85} stroke="var(--ivory)" strokeWidth="0.8" />
           );
         })}
-        <text x={cx} y={cy - 3} textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="13" fontWeight="500" fill={isSelected ? "var(--gold)" : "rgba(45,45,45,0.55)"}>
+        <text x={cx} y={cy - 3} textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="14.5" fontWeight="500" fill={isSelected ? "var(--gold)" : "rgba(45,45,45,0.55)"}>
           {tableNum}
         </text>
-        <text x={cx} y={cy + 9} textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="6.5" fill="rgba(45,45,45,0.35)" letterSpacing="0.5">
+        <text x={cx} y={cy + 9} textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="7.5" fill="rgba(45,45,45,0.35)" letterSpacing="0.5">
           {tableNames[tableNum].toUpperCase()}
         </text>
       </svg>
@@ -73,24 +73,24 @@ export function OrgSeating() {
       {/* Floor plan */}
       <div
         className="relative w-full mb-5"
-        style={{ backgroundColor: "var(--champagne)", borderRadius: "4px", border: "0.5px solid rgba(45,45,45,0.08)", paddingBottom: "90%", overflow: "hidden" }}
+        style={{ backgroundColor: "var(--champagne)", borderRadius: "4px", border: "0.5px solid rgba(45,45,45,0.08)", height: "clamp(280px, 58vw, 360px)", maxWidth: "560px", margin: "0 auto 20px", overflow: "hidden" }}
       >
         <div className="absolute top-3 left-0 right-0 flex justify-center">
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "8px", letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(45,45,45,0.3)" }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(45,45,45,0.3)" }}>
             Grand Salon
           </p>
         </div>
 
         {/* Top table */}
         <div className="absolute flex items-center justify-center" style={{ left: "50%", top: "5%", transform: "translateX(-50%)", width: "34%", height: "5%", backgroundColor: "rgba(198,168,107,0.15)", border: "0.5px solid rgba(198,168,107,0.4)", borderRadius: "2px" }}>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "7px", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--gold)" }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "8px", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--gold)" }}>
             Top Table
           </p>
         </div>
 
         {/* Dance floor */}
         <div className="absolute flex items-center justify-center" style={{ left: "50%", top: "50%", transform: "translate(-50%,-50%)", width: "20%", height: "18%", border: "0.5px dashed rgba(45,45,45,0.1)", borderRadius: "50%" }}>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "6.5px", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(45,45,45,0.2)" }}>Dance</p>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "7.5px", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(45,45,45,0.2)" }}>Dance</p>
         </div>
 
         {tables.map(t => (
@@ -115,7 +115,7 @@ export function OrgSeating() {
           ].map(l => (
             <div key={l.label} className="flex items-center gap-1">
               <div style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: l.color }} />
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "7.5px", color: "rgba(45,45,45,0.45)", letterSpacing: "0.08em" }}>{l.label}</p>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "8.5px", color: "rgba(45,45,45,0.45)", letterSpacing: "0.08em" }}>{l.label}</p>
             </div>
           ))}
         </div>
@@ -126,14 +126,14 @@ export function OrgSeating() {
         <div>
           <div className="flex items-center justify-between mb-3">
             <div>
-              <p style={{ fontFamily: "var(--font-serif)", fontSize: "20px", fontWeight: 500, color: "var(--charcoal)" }}>
+              <p style={{ fontFamily: "var(--font-serif)", fontSize: "21.5px", fontWeight: 500, color: "var(--charcoal)" }}>
                 Table {selectedTable} — {tableNames[selectedTable]}
               </p>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", color: "var(--muted-foreground)", marginTop: "1px" }}>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--muted-foreground)", marginTop: "1px" }}>
                 {tableGuests(selectedTable).filter(g => g.arrived === "checked-in").length} of {tableGuests(selectedTable).length} checked in
               </p>
             </div>
-            <button onClick={() => setSelectedTable(null)} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--muted-foreground)", fontSize: "11px", letterSpacing: "0.1em" }}>
+            <button onClick={() => setSelectedTable(null)} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--muted-foreground)", fontSize: "12px", letterSpacing: "0.1em" }}>
               Close
             </button>
           </div>
@@ -156,14 +156,14 @@ export function OrgSeating() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div style={{ width: "7px", height: "7px", borderRadius: "50%", backgroundColor: arrivalColor[g.arrived], flexShrink: 0 }} />
-                    <p style={{ fontFamily: "var(--font-serif)", fontSize: "16px", color: "var(--charcoal)" }}>{g.name}</p>
+                    <p style={{ fontFamily: "var(--font-serif)", fontSize: "17.5px", color: "var(--charcoal)" }}>{g.name}</p>
                     {g.dietary !== "Standard" && (
-                      <span style={{ fontFamily: "var(--font-sans)", fontSize: "9px", padding: "1px 6px", borderRadius: "2px", backgroundColor: `${dietaryColors[g.dietary]}18`, border: `0.5px solid ${dietaryColors[g.dietary]}50`, color: dietaryColors[g.dietary] }}>
+                      <span style={{ fontFamily: "var(--font-sans)", fontSize: "10px", padding: "1px 6px", borderRadius: "2px", backgroundColor: `${dietaryColors[g.dietary]}18`, border: `0.5px solid ${dietaryColors[g.dietary]}50`, color: dietaryColors[g.dietary] }}>
                         {g.dietary}
                       </span>
                     )}
                   </div>
-                  <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", color: "var(--muted-foreground)" }}>Seat {g.seat}</p>
+                  <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--muted-foreground)" }}>Seat {g.seat}</p>
                 </div>
 
                 {/* Expanded detail */}
@@ -179,8 +179,8 @@ export function OrgSeating() {
                       g.dietaryNote ? { label: "Note", value: g.dietaryNote } : null,
                     ].filter(Boolean).map((item, i) => (
                       <div key={i}>
-                        <p style={{ fontFamily: "var(--font-sans)", fontSize: "8.5px", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>{item!.label}</p>
-                        <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--charcoal)", marginTop: "2px" }}>{item!.value}</p>
+                        <p style={{ fontFamily: "var(--font-sans)", fontSize: "9.5px", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>{item!.label}</p>
+                        <p style={{ fontFamily: "var(--font-sans)", fontSize: "13.5px", color: "var(--charcoal)", marginTop: "2px" }}>{item!.value}</p>
                       </div>
                     ))}
                   </div>
@@ -192,7 +192,7 @@ export function OrgSeating() {
       )}
 
       {!selectedTable && (
-        <p style={{ fontFamily: "var(--font-serif)", fontSize: "14px", fontStyle: "italic", color: "var(--muted-foreground)", textAlign: "center", paddingTop: "8px" }}>
+        <p style={{ fontFamily: "var(--font-serif)", fontSize: "15.5px", fontStyle: "italic", color: "var(--muted-foreground)", textAlign: "center", paddingTop: "8px" }}>
           Tap a table to view guests
         </p>
       )}

@@ -93,16 +93,16 @@ export function TransportationScreen({ onBack }: TransportationScreenProps) {
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M10 3L5 8L10 13" stroke="var(--charcoal)" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          <span style={{ fontFamily: "var(--font-sans)", fontSize: "11px", letterSpacing: "0.12em", color: "var(--muted-foreground)" }}>Back</span>
+          <span style={{ fontFamily: "var(--font-sans)", fontSize: "12px", letterSpacing: "0.12em", color: "var(--muted-foreground)" }}>Back</span>
         </button>
-        <span style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>
+        <span style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--muted-foreground)" }}>
           Ceremoniq
         </span>
         <div style={{ width: "48px" }} />
       </div>
 
       <div className="px-7 pt-8 pb-6">
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--gold)" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--gold)" }}>
           Getting Here
         </p>
         <h1
@@ -113,7 +113,7 @@ export function TransportationScreen({ onBack }: TransportationScreenProps) {
         </h1>
         <p
           className="mt-2"
-          style={{ fontFamily: "var(--font-serif)", fontSize: "15px", fontStyle: "italic", color: "var(--dusty-rose)" }}
+          style={{ fontFamily: "var(--font-serif)", fontSize: "16.5px", fontStyle: "italic", color: "var(--dusty-rose)" }}
         >
           Everything you need to arrive with ease
         </p>
@@ -137,7 +137,7 @@ export function TransportationScreen({ onBack }: TransportationScreenProps) {
                 marginRight: "24px",
                 cursor: "pointer",
                 fontFamily: "var(--font-sans)",
-                fontSize: "10px",
+                fontSize: "11px",
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
                 color: activeTab === tab ? "var(--charcoal)" : "var(--muted-foreground)",
@@ -169,7 +169,7 @@ export function TransportationScreen({ onBack }: TransportationScreenProps) {
               <path d="M8 5V8.5" stroke="var(--gold)" strokeWidth="0.9" strokeLinecap="round" />
               <circle cx="8" cy="11" r="0.6" fill="var(--gold)" />
             </svg>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--charcoal)", lineHeight: 1.6 }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "13.5px", color: "var(--charcoal)", lineHeight: 1.6 }}>
               Complimentary shuttle service is provided for all guests. No booking required — simply arrive at your hotel entrance at the listed time.
             </p>
           </div>
@@ -177,8 +177,8 @@ export function TransportationScreen({ onBack }: TransportationScreenProps) {
           {shuttleSchedule.map((section) => (
             <div key={section.direction} className="mb-7">
               <div className="flex items-baseline gap-3 mb-4">
-                <p style={{ fontFamily: "var(--font-serif)", fontSize: "19px", fontWeight: 500, color: "var(--charcoal)" }}>{section.direction}</p>
-                <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--muted-foreground)" }}>{section.date}</p>
+                <p style={{ fontFamily: "var(--font-serif)", fontSize: "20.5px", fontWeight: 500, color: "var(--charcoal)" }}>{section.direction}</p>
+                <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--muted-foreground)" }}>{section.date}</p>
               </div>
               <div className="flex flex-col gap-2.5">
                 {section.runs.map((run, i) => (
@@ -192,11 +192,11 @@ export function TransportationScreen({ onBack }: TransportationScreenProps) {
                       border: "0.5px solid rgba(45,45,45,0.08)",
                     }}
                   >
-                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--gold)", minWidth: "60px", letterSpacing: "0.05em" }}>
+                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "13.5px", color: "var(--gold)", minWidth: "60px", letterSpacing: "0.05em" }}>
                       {run.time}
                     </p>
                     <div style={{ width: "0.5px", height: "24px", backgroundColor: "rgba(45,45,45,0.1)" }} />
-                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--charcoal)", lineHeight: 1.4 }}>{run.from}</p>
+                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "13.5px", color: "var(--charcoal)", lineHeight: 1.4 }}>{run.from}</p>
                   </div>
                 ))}
               </div>
@@ -219,7 +219,7 @@ export function TransportationScreen({ onBack }: TransportationScreenProps) {
               }}
             >
               <div className="flex items-start justify-between gap-2 mb-1">
-                <p style={{ fontFamily: "var(--font-serif)", fontSize: "19px", fontWeight: 500, color: "var(--charcoal)", lineHeight: 1.2 }}>
+                <p style={{ fontFamily: "var(--font-serif)", fontSize: "20.5px", fontWeight: 500, color: "var(--charcoal)", lineHeight: 1.2 }}>
                   {hotel.name}
                 </p>
                 {hotel.shuttle && (
@@ -232,21 +232,21 @@ export function TransportationScreen({ onBack }: TransportationScreenProps) {
                       flexShrink: 0,
                     }}
                   >
-                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "8px", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--sage)" }}>
+                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--sage)" }}>
                       Shuttle
                     </p>
                   </div>
                 )}
               </div>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--dusty-rose)", marginBottom: "8px" }}>{hotel.category}</p>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--muted-foreground)", marginBottom: "4px" }}>{hotel.address}</p>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--muted-foreground)" }}>{hotel.distance}</p>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--dusty-rose)", marginBottom: "8px" }}>{hotel.category}</p>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "13.5px", color: "var(--muted-foreground)", marginBottom: "4px" }}>{hotel.address}</p>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--muted-foreground)" }}>{hotel.distance}</p>
               <div
                 className="mt-3 flex items-center gap-1.5"
                 style={{ borderTop: "0.5px solid rgba(45,45,45,0.07)", paddingTop: "10px" }}
               >
                 <div style={{ width: "3px", height: "3px", borderRadius: "50%", backgroundColor: hotel.shuttle ? "var(--sage)" : "var(--dusty-rose)" }} />
-                <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: hotel.shuttle ? "var(--sage)" : "var(--dusty-rose)" }}>
+                <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: hotel.shuttle ? "var(--sage)" : "var(--dusty-rose)" }}>
                   {hotel.note}
                 </p>
               </div>
@@ -274,20 +274,20 @@ export function TransportationScreen({ onBack }: TransportationScreenProps) {
                 <circle cx="9" cy="6.75" r="1.75" stroke="var(--gold)" strokeWidth="0.8" />
               </svg>
               <div>
-                <p style={{ fontFamily: "var(--font-serif)", fontSize: "19px", fontWeight: 500, color: "var(--charcoal)", marginBottom: "4px" }}>
+                <p style={{ fontFamily: "var(--font-serif)", fontSize: "20.5px", fontWeight: 500, color: "var(--charcoal)", marginBottom: "4px" }}>
                   Castello di Petrata
                 </p>
-                <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--muted-foreground)", lineHeight: 1.5 }}>
+                <p style={{ fontFamily: "var(--font-sans)", fontSize: "13.5px", color: "var(--muted-foreground)", lineHeight: 1.5 }}>
                   Localita Petrata, 06134 Perugia PG, Italy
                 </p>
-                <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--gold)", marginTop: "6px" }}>
+                <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--gold)", marginTop: "6px" }}>
                   GPS: 43.1063° N, 12.4321° E
                 </p>
               </div>
             </div>
           </div>
 
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "14px" }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "14px" }}>
             Driving Directions
           </p>
           <div className="flex flex-col gap-3">
@@ -301,10 +301,10 @@ export function TransportationScreen({ onBack }: TransportationScreenProps) {
                   border: "0.5px solid rgba(45,45,45,0.08)",
                 }}
               >
-                <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "5px" }}>
+                <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "5px" }}>
                   {item.label}
                 </p>
-                <p style={{ fontFamily: "var(--font-sans)", fontSize: "13px", color: "var(--charcoal)", lineHeight: 1.5 }}>{item.value}</p>
+                <p style={{ fontFamily: "var(--font-sans)", fontSize: "14.5px", color: "var(--charcoal)", lineHeight: 1.5 }}>{item.value}</p>
               </div>
             ))}
           </div>
@@ -318,10 +318,10 @@ export function TransportationScreen({ onBack }: TransportationScreenProps) {
               padding: "16px 18px",
             }}
           >
-            <p style={{ fontFamily: "var(--font-serif)", fontSize: "15px", fontStyle: "italic", color: "var(--charcoal)", marginBottom: "5px" }}>
+            <p style={{ fontFamily: "var(--font-serif)", fontSize: "16.5px", fontStyle: "italic", color: "var(--charcoal)", marginBottom: "5px" }}>
               Private transfers
             </p>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--muted-foreground)", lineHeight: 1.6 }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "13.5px", color: "var(--muted-foreground)", lineHeight: 1.6 }}>
               Pre-arranged private taxis are available. Please contact the concierge at{" "}
               <span style={{ color: "var(--gold)" }}>concierge@ceremoniq.co</span> at least 48 hours in advance.
             </p>

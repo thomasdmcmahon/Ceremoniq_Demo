@@ -7,9 +7,8 @@ import { DiningScreen } from "./components/DiningScreen";
 import { SeatingScreen } from "./components/SeatingScreen";
 import { TransportationScreen } from "./components/TransportationScreen";
 import { OrganizerDashboard } from "./components/organizer/OrganizerDashboard";
-import { PitchDeck } from "./components/PitchDeck";
 
-type Screen = "welcome" | "home" | "timeline" | "dining" | "seating" | "transportation" | "organizer" | "pitch";
+type Screen = "welcome" | "home" | "timeline" | "dining" | "seating" | "transportation" | "organizer";
 
 function getVariants(from: Screen, to: Screen) {
   if (to === "welcome" || from === "welcome") {
@@ -65,7 +64,6 @@ export default function App() {
             <HomeScreen
               onNavigate={(s) => navigate(s as Screen)}
               onOrganizerAccess={() => navigate("organizer")}
-              onPitchDeck={() => navigate("pitch")}
             />
           )}
           {screen === "timeline" && (
@@ -82,9 +80,6 @@ export default function App() {
           )}
           {screen === "organizer" && (
             <OrganizerDashboard onExit={() => navigate("home")} />
-          )}
-          {screen === "pitch" && (
-            <PitchDeck onExit={() => navigate("home")} />
           )}
         </motion.div>
       </AnimatePresence>

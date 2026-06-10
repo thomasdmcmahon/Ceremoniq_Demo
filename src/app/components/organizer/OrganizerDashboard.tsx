@@ -24,7 +24,7 @@ function StatusBadge({ children, color }: { children: React.ReactNode; color: st
   return (
     <div className="flex items-center gap-1.5">
       <div style={{ width: "5px", height: "5px", borderRadius: "50%", backgroundColor: color, flexShrink: 0 }} />
-      <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", color, letterSpacing: "0.08em" }}>{children}</p>
+      <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color, letterSpacing: "0.08em" }}>{children}</p>
     </div>
   );
 }
@@ -52,19 +52,19 @@ export function OrganizerDashboard({ onExit }: OrganizerDashboardProps) {
           {/* Top row */}
           <div className="flex items-start justify-between mb-3">
             <div>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "8.5px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "4px" }}>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "9.5px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "4px" }}>
                 Operations Center
               </p>
               <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(24px, 6vw, 34px)", fontWeight: 300, color: "var(--charcoal)", lineHeight: 1.1 }}>
                 Romeo &amp; Juliet
               </h1>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--muted-foreground)", marginTop: "3px" }}>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--muted-foreground)", marginTop: "3px" }}>
                 Castello di Petrata · 21 June 2027
               </p>
             </div>
             <button
               onClick={onExit}
-              style={{ background: "none", border: "0.5px solid rgba(45,45,45,0.15)", borderRadius: "2px", padding: "6px 12px", cursor: "pointer", fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--muted-foreground)", whiteSpace: "nowrap", flexShrink: 0, marginTop: "4px" }}
+              style={{ background: "none", border: "0.5px solid rgba(45,45,45,0.15)", borderRadius: "2px", padding: "6px 12px", cursor: "pointer", fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--muted-foreground)", whiteSpace: "nowrap", flexShrink: 0, marginTop: "4px" }}
             >
               Guest View
             </button>
@@ -78,7 +78,7 @@ export function OrganizerDashboard({ onExit }: OrganizerDashboardProps) {
             <div style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "var(--sage)", flexShrink: 0 }}>
               {/* Pulse ring via CSS animation would go here; using static dot for now */}
             </div>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--charcoal)", flex: 1 }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--charcoal)", flex: 1 }}>
               Ceremony begins in <span style={{ color: "var(--gold)", fontWeight: 500 }}>45 minutes</span>
             </p>
             <div className="flex items-center gap-3">
@@ -103,7 +103,7 @@ export function OrganizerDashboard({ onExit }: OrganizerDashboardProps) {
                 padding: "11px 16px",
                 cursor: "pointer",
                 fontFamily: "var(--font-sans)",
-                fontSize: "10px",
+                fontSize: "11px",
                 letterSpacing: "0.14em",
                 textTransform: "uppercase",
                 color: activeTab === tab.id ? "var(--charcoal)" : "var(--muted-foreground)",
@@ -119,7 +119,7 @@ export function OrganizerDashboard({ onExit }: OrganizerDashboardProps) {
 
       {/* Module title */}
       <div className="px-6 pt-6 pb-3 flex items-baseline gap-3">
-        <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "26px", fontWeight: 300, color: "var(--charcoal)", lineHeight: 1.1 }}>
+        <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "28px", fontWeight: 300, color: "var(--charcoal)", lineHeight: 1.1 }}>
           {tabs.find(t => t.id === activeTab)?.label}
         </h2>
         <div style={{ flex: 1, height: "0.5px", backgroundColor: "rgba(45,45,45,0.1)" }} />

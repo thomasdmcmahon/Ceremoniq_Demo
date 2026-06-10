@@ -51,7 +51,7 @@ export function Announcements() {
             padding: "15px",
             cursor: "pointer",
             fontFamily: "var(--font-sans)",
-            fontSize: "11px",
+            fontSize: "12px",
             letterSpacing: "0.22em",
             textTransform: "uppercase",
             transition: "opacity 0.2s ease",
@@ -64,7 +64,7 @@ export function Announcements() {
         </button>
       ) : (
         <div className="mb-6" style={{ backgroundColor: "var(--champagne)", borderRadius: "4px", border: "0.5px solid rgba(45,45,45,0.1)", padding: "18px" }}>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "10px" }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "10px" }}>
             New Announcement
           </p>
           <textarea
@@ -80,7 +80,7 @@ export function Announcements() {
               borderRadius: "3px",
               padding: "12px 14px",
               fontFamily: "var(--font-sans)",
-              fontSize: "13px",
+              fontSize: "14.5px",
               color: "var(--charcoal)",
               resize: "none",
               outline: "none",
@@ -90,7 +90,7 @@ export function Announcements() {
           />
 
           {/* Templates */}
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "8.5px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "8px" }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "9.5px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "8px" }}>
             Quick Templates
           </p>
           <div className="flex flex-col gap-1.5 mb-4">
@@ -105,7 +105,7 @@ export function Announcements() {
                   padding: "8px 12px",
                   textAlign: "left",
                   fontFamily: "var(--font-sans)",
-                  fontSize: "11.5px",
+                  fontSize: "12.5px",
                   color: "var(--charcoal)",
                   cursor: "pointer",
                   transition: "background-color 0.15s ease",
@@ -129,7 +129,7 @@ export function Announcements() {
                 borderRadius: "3px",
                 padding: "12px",
                 fontFamily: "var(--font-sans)",
-                fontSize: "11px",
+                fontSize: "12px",
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
                 cursor: "pointer",
@@ -146,7 +146,7 @@ export function Announcements() {
                 borderRadius: "3px",
                 padding: "12px 18px",
                 fontFamily: "var(--font-sans)",
-                fontSize: "11px",
+                fontSize: "12px",
                 cursor: "pointer",
               }}
             >
@@ -159,22 +159,22 @@ export function Announcements() {
       {sent && (
         <div className="mb-4 px-4 py-3 flex items-center gap-2" style={{ backgroundColor: "rgba(168,178,154,0.15)", border: "0.5px solid rgba(168,178,154,0.4)", borderRadius: "3px" }}>
           <div style={{ width: "5px", height: "5px", borderRadius: "50%", backgroundColor: "var(--sage)" }} />
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "12px", color: "var(--sage)" }}>Announcement sent to all 32 guests</p>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "13.5px", color: "var(--sage)" }}>Announcement sent to all 32 guests</p>
         </div>
       )}
 
       {/* Sent announcements */}
-      <p style={{ fontFamily: "var(--font-sans)", fontSize: "9px", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "12px" }}>
+      <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted-foreground)", marginBottom: "12px" }}>
         Sent
       </p>
       <div className="flex flex-col gap-3">
         {announcements.map(a => (
           <div key={a.id} style={{ backgroundColor: "var(--champagne)", borderRadius: "4px", border: "0.5px solid rgba(45,45,45,0.07)", padding: "16px 18px" }}>
             <div className="flex items-start justify-between gap-3 mb-2">
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", color: "var(--gold)", letterSpacing: "0.1em" }}>{a.sentAt}</p>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", color: "var(--muted-foreground)" }}>{a.sentBy}</p>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--gold)", letterSpacing: "0.1em" }}>{a.sentAt}</p>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--muted-foreground)" }}>{a.sentBy}</p>
             </div>
-            <p style={{ fontFamily: "var(--font-serif)", fontSize: "15px", color: "var(--charcoal)", lineHeight: 1.55, marginBottom: "10px" }}>
+            <p style={{ fontFamily: "var(--font-serif)", fontSize: "16.5px", color: "var(--charcoal)", lineHeight: 1.55, marginBottom: "10px" }}>
               "{a.message}"
             </p>
             {/* Read rate bar */}
@@ -182,7 +182,7 @@ export function Announcements() {
               <div style={{ flex: 1, height: "2px", backgroundColor: "rgba(45,45,45,0.08)", borderRadius: "2px", overflow: "hidden" }}>
                 <div style={{ width: `${(a.readCount / a.totalSent) * 100}%`, height: "100%", backgroundColor: "var(--sage)", borderRadius: "2px" }} />
               </div>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "10px", color: "var(--muted-foreground)", whiteSpace: "nowrap" }}>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "11px", color: "var(--muted-foreground)", whiteSpace: "nowrap" }}>
                 {a.readCount}/{a.totalSent} read
               </p>
             </div>
